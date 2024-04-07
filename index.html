@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900" rel="stylesheet">
+
+ 	<link rel="stylesheet" href="css/style.css">
+
+
+    <title>CSS Keyframe Animation</title>
+
+</head>
+<body>
+
+
+	<div class="container">
+
+		<header><h1>CSS Keyframe Animation</h1></header>
+
+		<div class="snippet">
+			<p><strong>.animated-element {</strong></p>
+
+			<p class="active a-name req"><i class="fa fa-info-circle info"></i><span>animation-name:</span> <span><input name="animation-name" type="text" value="myAnim"></span> <small>(required)</small></p>
+			<p class="active duration req"><i class="fa fa-info-circle info"></i><span>animation-duration:</span> <span><input type="number" name="animation-duration" value="4">s</span> <small>(required)</small></p>
+
+			<p>
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation-iteration-count:</span>
+					<span class="value">
+						<select disabled name="animation-iteration-count">
+							<option>1</option>
+							<option>2</option>
+							<option value="infinite">infinite</option>
+						</select>
+					</span>
+				</span>
+			</p>
+
+			<p>
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation-delay:</span>
+					<span class="value">
+						<input disabled type="number" name="animation-delay" value="0">s</span>
+					</span>
+				</span>
+			</p>
+
+			<p>
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation-direction:</span>
+					<span class="value">
+						<select disabled name="animation-direction">
+							<option>normal</option>
+							<option>reverse</option>
+							<option>alternate</option>
+							<option>alternate-reverse</option>
+						</select>
+					</span>
+				</span>
+			</p>
+
+			<p>
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation-play-state:</span>
+					<span class="value">
+						<select disabled name="animation-play-state">
+							<option>running</option>
+							<option>paused</option>
+						</select>
+					</span>
+				</span>
+			</p>
+
+			<p>
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation-fill-mode:</span>
+					<span class="value">
+						<select disabled name="animation-fill-mode">
+							<option>none</option>
+							<option>forwards</option>
+							<option>backwards</option>
+							<option>both</option>
+						</select>
+					</span>
+				</span>
+			</p>
+
+			<p>
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation-timing-function:</span>
+					<span class="value">
+						<select disabled name="animation-timing-function">
+							<option>ease</option>
+							<option>ease-in</option>
+							<option>ease-out</option>
+							<option>ease-in-out</option>
+							<option>linear</option>
+							<option>cubic-bezier(.4,-0.92,.54,1.68)</option>
+							<option>steps(1)</option>
+						</select>
+					</span>
+					<small class="c-b">/* These cubic-bezier() coordinates are just an example */</small>
+				</span>
+			</p>
+
+			<p class="shorthand">
+				<i class="fa fa-info-circle info"></i>
+				<i class="fa fa-plus-circle toggle"></i>
+				<span>
+					<span class="property">animation:</span>
+					<span class="value">
+						<input disabled type="text" name="animation" value="">
+					</span>
+				</span>
+				<small>(shorthand)</small>
+			</p>
+
+			<p><small>/* Default values have been omitted from the shorthand */</small></p>
+
+			<p><strong>}</strong></p>
+		</div>
+
+
+		<div class="fixed-col">
+
+			<div class="anim-wrap">
+				<div class="anim-container">
+					<img class="anim-element" src="images/df.png" alt="DF">
+				</div>
+				<button class="btn restart">Restart Danimation</button>
+			</div>
+
+			<div class="more-options">
+				<p>Try some of these <code><a target="_blank" href="https://daneden.github.io/animate.css/">animate.css</a></code> effects below and see how the keyframes translate to the resulting animation (don't forget to play with the duration and other animation controls).</p>
+				<p>animate.css is a CSS library packed with tons of little keyframe based animations. You can simply include the file in your page, and add the appropriate classes (such as <code>.fadeIn</code> to the element(s) you want to animate.</p>
+				<p>However, most of the time you will only want to use 1 or 2 of the animations from the library, meaning it'd make more sense to include the keyframes from these animations in your main stylesheet, subsequently saving an extra http request.</p>
+				<button class="fadeIn btn apply-keyframes">fadeIn</button>
+				<button class="fadeOut btn apply-keyframes">fadeOut</button>
+				<button class="fadeInUp btn apply-keyframes">fadeInUp</button>
+				<button class="fadeInDown btn apply-keyframes">fadeInDown</button>
+				<button class="zoomIn btn apply-keyframes">zoomIn</button>
+				<button class="zoomOut btn apply-keyframes">zoomOut</button>
+				<button class="lightSpeedIn btn apply-keyframes">lightSpeedIn</button>
+				<button class="wobble btn apply-keyframes">wobble</button>
+				<button class="hinge btn apply-keyframes">hinge</button>
+				<button class="headBang btn apply-keyframes">headBang</button>
+				<button class="restore btn apply-keyframes active">Original Keyframes</button>
+			</div>
+
+		</div>
+
+
+
+		<div class="overlay"></div>
+
+		<div class="popups">
+
+			<div class="popup">
+				<h3><code>animation-name</code> <small>(required)</small></h3>
+				<p>This is the name that you gave to your set of keyframes and is required for your animation to work</p>
+				<p><code>@keyframes myAnim { }</code></p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation-duration</code> <small>(required)</small></h3>
+				<p>This defines how long the animation should last and is required for your animation to work</p>
+				<p>It accepts values in miliseconds or seconds, e.g.</p>
+				<p><code>300ms</code></p>
+				<p><code>0.5s</code></p>
+				<p><code>3s</code></p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation-iteration-count</code> <small>(optional)</small></h3>
+				<p>This defines how many times you want the animation to run</p>
+				<p>It accepts number values and the <code>infinite</code> keyword</p>
+				<p>The default value is <code>1</code></p>
+				<p>You can also use decimal values such as <code>1.5</code>, which would run the animation 1 and a half times</p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation-delay</code> <small>(optional)</small></h3>
+				<p>Use this property to delay the start of your animation</p>
+				<p>It accepts values in miliseconds or seconds, e.g.</p>
+				<p><code>300ms</code></p>
+				<p><code>0.5s</code></p>
+				<p><code>3s</code></p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation-direction</code> <small>(optional)</small></h3>
+				<p>This property states whether the animation should play normally or in reverse</p>
+				<p>The possible values are:</p>
+				<p><code>normal</code> (default value)</p>
+				<p><code>reverse</code> Plays the animation backwards</p>
+				<p><code>alternate</code> If the animation is set to run more than once, this value would play it forwards, then backwards and so on</p>
+				<p><code>alternate-reverse</code> If the animation is set to run more than once, this value would play it backwards, then forwards and so on</p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation-play-state</code> <small>(optional)</small></h3>
+				<p>This property allows you to pause your animation and is most useful on hover and on other trigger events</p>
+				<p>The possible values are:</p>
+				<p><code>running</code> (default value)</p>
+				<p><code>paused</code> Pauses the animation</p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation-fill-mode</code> <small>(optional)</small></h3>
+				<p>By default, if your animation doesn't finish in the same place as it starts, it snaps back to its original styling on completion.</p>
+				<p>This property allows it to keep the styles set in your last keyframe.</p>
+				<p>The possible values are:</p>
+				<p><code>none</code> (default value)</p>
+				<p><code>forwards</code> ensures that your element maintains the styles specified in the last keyframe after the animation finishes</p>
+				<p><code>backwards</code> applies if you have specified an animation-delay value because it ensures the styles from the first keyframe are applied immediately, even before the animation has begun</p>
+				<p><code>both</code> applies the rules from the previous two values</p>
+			</div>
+
+			<div class="popup wide">
+				<h3><code>animation-timing-function</code> <small>(optional)</small></h3>
+				<p>This property allows you to define where the animation accelerates and decelerates over the specified duration, and can be very powerful.</p>
+				<p>There are 5 keyword values which are all essentially shorthands for a cubic-bezier() function.</p>
+				<p>You can use this cubic-bezier() function to create custom timing functions (<a target="_blank" href="http://cubic-bezier.com">Create Your Own</a>)</p>
+				<p>Bear in mind that the timing function is applied to each keyframe rather than the animation as a whole, so the <code>ease-in</code> value for example would ease into each keyframe</p>
+				<p>The possible values are:</p>
+				<p><code>ease</code> (default value)</p>
+				<p><code>ease-in</code></p>
+				<p><code>ease-out</code></p>
+				<p><code>ease-in-out</code></p>
+				<p><code>linear</code></p>
+				<p><code>cubic-bezier(0,0,0,0)</code></p>
+				<p><code>steps(1)</code> The steps() function causes your animation to play over a specified number of steps, jumping from one keyframe to the next, rather than smoothly transitioning between each keyframe</p>
+				<p><strong>I explain animation timing functions in much greater depth in <a target="_blank" href="https://www.smashingmagazine.com/2014/04/understanding-css-timing-functions/">this article</a></strong></p>
+			</div>
+
+			<div class="popup">
+				<h3><code>animation</code> <small>(shorthand)</small></h3>
+				<p>The values for all of the previous properties can be combined into a single <code>animation</code> property</p>
+				<p>The only required values for this property are <code>animation-name</code> and <code>animation-duration</code></p>
+				<p>The syntax for this property is very lenient in terms of what order the values can be stated - the only rule is that if you include both an <code>animation-duration</code> and <code>animation-delay</code> value, the duration value must come before the delay value</p>
+			</div>
+
+		</div>
+
+		<h2 class="code-block-title">Keyframes</h2>
+		<textarea class="keyframes-text code-block">
+@keyframes myAnim {
+
+    0% {
+        max-width: 80px;
+        margin-left: 0;
+        left: -80px;
+    }
+
+    25% {
+        left: 25%;
+        bottom: 35%;
+    }
+
+    50% {
+        left: 50%;
+        bottom: 18%;
+    }
+
+    75% {
+        left: 75%;
+        bottom: 35%;
+    }
+
+    100% {
+        max-width: 80px;
+        margin-left: 0;
+        left: 100%;
+        bottom: 18%;
+    }
+
+}</textarea>
+		<button class="btn apply-keyframes">Apply Keyframes</button>
+
+
+		<h2 class="code-block-title">Animated Element Styles</h2>
+		<textarea class="element-styles code-block">
+.animated-element {
+    max-width: 120px;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    margin-left: -60px;
+    animation: 4s myAnim;
+}</textarea>
+		<button class="btn apply-styles">Apply Styles</button>
+
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/site.js"></script>
+
+</body>
+</html>
